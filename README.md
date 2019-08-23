@@ -13,7 +13,7 @@
 <img src="images/map1.PNG" />
 <img src="images/map2.PNG" />
 
-## Code
+## Code snippets
 ### Setup
 - Loading in raw precinct voting data for US senate and house from MassGov
 - Loading in a precincts crosswalk file I created between shapefile and voting data for joining purposes
@@ -64,4 +64,4 @@ magis@data<-left_join(magis@data,pxwalk,by=c('WP_NAME'='gis_precincts'))
 votes<-as.data.frame(votes)
 magis@data<-left_join(magis@data,votes,by=c('medsl_precinct_1'='xwalk'))
 ```
-This finalized data was then used to create the maps found above.
+After finalizing, this joined data was then used to create the maps found above.
