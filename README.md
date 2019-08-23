@@ -60,3 +60,6 @@ magis@data<-left_join(magis@data,votes,by=c('medsl_precinct_1'='xwalk'))
 ```
 
 ### Mapping
+> Here are some screenshots of the final interactive map. The useable interactive map can be found in the link in the header.
+![]images/map1
+![]images/map2
