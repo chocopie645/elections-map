@@ -30,7 +30,7 @@ library(maptools)
 
 Please adjust working directory on your own computer as necessary.
 
-```{r}
+```r
 setwd("C:/Users/User/Documents/GitHub/elections-map/elections-map")
 fed <- read.csv("mass_federal.csv")
 
