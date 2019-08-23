@@ -8,7 +8,7 @@
  Compared to towns, wards, or municipalities, precinct voting data is hard to come by and not readily available, yet is monumentally important in the study of election science. For example, the closest project in terms of similarity to mine is [WBUR's Mass election results](https://www.wbur.org/politicker/2016/11/08/massachusetts-election-map), which only goes as in depth of results from 256 towns rather than the 2152 precincts in Massachusetts. 
 
 ## Project
-#### Setup
+### Setup
 - Loading in raw precinct voting data for US senate and house from MassGov
 - Loading in a precincts crosswalk file I created between shapefile and voting data for joining purposes
 - Reading in and exploring shape file/GIS data
@@ -27,7 +27,7 @@ MAsen <- fed[fed$office=="US Senate" & (fed$name=="Elizabeth A. Warren" | fed$na
 ```
 * side note * In order to simplify the visualisation process, I removed data regarding votes for the independent senate candidate, blank votes, and votes titled "all other". Treating the race as a purely bipartisan and only looking at the subset of people who voted for Warren or Diehl race may lead to inaccuracies or misleading ideas, but the median percentage of votes that didn't go to these two candidates per town is 5.2% which is low and may not affect results too heavily.
 
-#### Data wrangling and manipulation
+### Data wrangling and manipulation
 - Variable for joining crosswalk and shape file
 ```r
 WP <- case_when(!MAsen$ward=="-" ~ paste(MAsen$ward,MAsen$precinct,sep="-"),
@@ -58,3 +58,5 @@ magis@data<-left_join(magis@data,pxwalk,by=c('WP_NAME'='gis_precincts'))
 votes<-as.data.frame(votes)
 magis@data<-left_join(magis@data,votes,by=c('medsl_precinct_1'='xwalk'))
 ```
+
+### Mapping
