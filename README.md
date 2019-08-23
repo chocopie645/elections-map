@@ -1,5 +1,6 @@
 # elections-map
-  [**Interactive map**](http://rpubs.com/chocopie645/521703) of bipartisan votes in all 2152 Massachusetts precincts in the 2018 US Senate election
+## Project
+  [**Interactive map**](http://rpubs.com/chocopie645/521703) of bipartisan votes in all 2152 Massachusetts precincts in the 2018 US Senate election.
 
 ## Motivation
  The goal of this project is to create a user friendly interactive map of all bipartisan votes in all 2152 voting Massachusetts precincts for residents to see how their precinct voted in the 2018 US Senate election, where the democrat candidate was Elizabeth A. Warren and the republican candidate was Geoff Diehl. 
