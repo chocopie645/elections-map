@@ -64,6 +64,6 @@ magis@data<-left_join(magis@data,votes,by=c('medsl_precinct_1'='xwalk'))
 
 <img src="images/map1.png" >
 
-![]images/map1.png
+![](images/map1.png)
 
 ![]images/map2.png
