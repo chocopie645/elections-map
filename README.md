@@ -27,7 +27,8 @@ library(maptools)
 - Loading in raw precinct voting data for US senate and house from MassGov
 - Loading in a precincts crosswalk file I created between shapefile and voting data for joining purposes
 - Reading in and exploring shape file/GIS data
-Please adjust working directory on your own computer as necessary
+
+Please adjust working directory on your own computer as necessary.
 
 ```{r}
 setwd("C:/Users/User/Documents/GitHub/elections-map/elections-map")
