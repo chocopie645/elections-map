@@ -1,20 +1,25 @@
 # elections-map
   Interactive map of bipartisan votes in all 2152 Massachusetts precincts in the 2018 US Senate election
-  (INSERT LINK HERE)
 
- ## Motivation
+## Motivation
  The goal of this project is to create a user friendly interactive map of all bipartisan votes in all 2152 voting Massachusetts precincts for residents to see how their precinct voted in the 2018 US Senate election, where the democrat candidate was Elizabeth A. Warren and the republican candidate was Geoff Diehl. 
  
- Compared to towns, wards, or municipalities, precinct voting data is hard to come by and not readily available, yet is monumentally important in the study of election science. For example, the closest project in terms of similarity to mine is [WBUR's Mass election results](https://www.wbur.org/politicker/2016/11/08/massachusetts-election-map), which only goes as in depth of results from 256 towns rather than the 2152 precincts in Massachusetts. 
+ Compared to towns, wards, or municipalities, precinct voting data is hard to come by and not readily available, yet is monumentally important in the study of election science. For example, the closest project in terms of similarity to mine is WBUR's Mass election results, which only goes as in depth of results from 256 towns rather than the 2152 precincts in Massachusetts. 
+ 
+## Final result
+- Here are some screenshots of the final interactive map. The useable interactive map can be found HERE
 
-## Project
+<img src="images/map1.PNG" />
+<img src="images/map2.PNG" />
+
+## Code
 ### Setup
 - Loading in raw precinct voting data for US senate and house from MassGov
 - Loading in a precincts crosswalk file I created between shapefile and voting data for joining purposes
 - Reading in and exploring shape file/GIS data
 - Subsetting out bipartisan US Senate election results data
 
-Please adjust working directory on your own computer as necessary.
+Please adjust working directory on your own computer as necessary, and refer to full R code in repo to load in needed libraries.
 
 ```r
 setwd("C:/Users/User/Documents/GitHub/elections-map/elections-map")
@@ -58,10 +63,4 @@ magis@data<-left_join(magis@data,pxwalk,by=c('WP_NAME'='gis_precincts'))
 votes<-as.data.frame(votes)
 magis@data<-left_join(magis@data,votes,by=c('medsl_precinct_1'='xwalk'))
 ```
-
-### Mapping
-- Here are some screenshots of the final interactive map. The useable interactive map can be found in the link in the header.
-
-<img src="images/map1.PNG" />
-<img src="images/map2.PNG" />
-
+> This was the final data then used to create the maps found above.
