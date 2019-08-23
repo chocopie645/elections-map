@@ -7,7 +7,7 @@
  Compared to towns, wards, or municipalities, precinct voting data is hard to come by and not readily available, yet is monumentally important in the study of election science. For example, the closest project in terms of similarity to mine is WBUR's Mass election results, which only goes as in depth of results from 256 towns rather than the 2152 precincts in Massachusetts. 
  
 ## Final result
-- Here are some screenshots of the final interactive map. The useable interactive map can be found HERE.
+- Here are some screenshots of the final interactive map. The useable interactive map can be found [here](https://github.com/chocopie645/elections-map/blob/master/elections-map.html).
 
 <img src="images/map1.PNG" />
 <img src="images/map2.PNG" />
@@ -63,4 +63,4 @@ magis@data<-left_join(magis@data,pxwalk,by=c('WP_NAME'='gis_precincts'))
 votes<-as.data.frame(votes)
 magis@data<-left_join(magis@data,votes,by=c('medsl_precinct_1'='xwalk'))
 ```
-> This was the final data then used to create the maps found above.
+This finalized data was then used to create the maps found above.
