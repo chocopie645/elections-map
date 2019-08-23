@@ -27,17 +27,18 @@ library(maptools)
 - Loading in raw precinct voting data for US senate and house from MassGov
 - Loading in a precincts crosswalk file I created between shapefile and voting data for joining purposes
 - Reading in and exploring shape file/GIS data
+- Subsetting out US Senate election results data
 
 Please adjust working directory on your own computer as necessary.
 
 ```r
 setwd("C:/Users/User/Documents/GitHub/elections-map/elections-map")
-fed <- read.csv("mass_federal.csv")
-
-pxwalk <- read.csv("crosswalk.csv")
-
+fed<-read.csv("mass_federal.csv")
+pxwalk<-read.csv("crosswalk.csv")
 setwd("C:/Users/User/Documents/GitHub/elections-map/elections-map/wardsprecincts_poly")
 magis <- readOGR("WARDSPRECINCTS_POLY.shp")
 magis@data
+MAsen <- fed[fed$office=="US Senate" & (fed$name=="Elizabeth A. Warren" | fed$name=="Geoff Diehl"),]
+MAsen <- fed[fed$office=="US Senate" & (fed$name=="Elizabeth A. Warren" | fed$name=="Geoff Diehl"),]
 ```
 
