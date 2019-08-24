@@ -31,7 +31,7 @@ magis <- readOGR("WARDSPRECINCTS_POLY.shp")
 magis@data
 MAsen <- fed[fed$office=="US Senate" & (fed$name=="Elizabeth A. Warren" | fed$name=="Geoff Diehl"),]
 ```
-*side note* In order to simplify the visualisation process, I removed data regarding votes for the independent senate candidate, blank votes, and votes titled "all other". Treating the race as a purely bipartisan and only looking at the subset of people who voted for Warren or Diehl race may lead to inaccuracies or misleading ideas, but the median percentage of votes that didn't go to these two candidates per town is 5.2% which is low and may not affect results too heavily.
+(*side note*) In order to simplify the visualisation process, I removed data regarding votes for the independent senate candidate, blank votes, and votes titled "all other". Treating the race as a purely bipartisan and only looking at the subset of people who voted for Warren or Diehl race may lead to inaccuracies or misleading ideas, but the median percentage of votes that didn't go to these two candidates per town is 5.2% which is low and may not affect results too heavily.
 
 ### Data wrangling and manipulation
 - Variable for joining crosswalk and shape file
